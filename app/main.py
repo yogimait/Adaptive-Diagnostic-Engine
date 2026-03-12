@@ -32,3 +32,8 @@ app.include_router(questions_router)
 @app.get("/")
 def root():
     return {"message": "Adaptive Diagnostic Engine API is running."}
+
+@app.get("/health")
+def health():
+    """Verify backend status quickly."""
+    return {"status": "ok"}
